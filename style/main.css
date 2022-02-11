@@ -1,0 +1,147 @@
+@charset "utf-8"
+    html, body, #wrap {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+}
+    body {font-size: 20px;}
+    footer,copy {font-size: .5em; text-align: right;}
+    div {margin-bottom: 1em;}
+    .bdr1px>a {text-decoration: none;
+        display: block;
+        color: darkslategray;
+        padding: 10px;
+        background: url(../img/logo.jpg);
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;}
+
+a {text-decoration: none;}
+
+/* tab 化 */
+#lyric {
+    display:flex;
+    flex-wrap:wrap;
+    max-width: 1000px;}
+label {
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 10px 10px 0 0;}
+.tab-label {
+    color: #ccc;
+    background: #696;
+    padding: .5em 1%;
+    order: -1;
+    cursor: pointer;
+    width: calc(50.2% - 5px);
+}
+#TAB-01+label {
+    margin-right: 5px;}
+.tab-switch,.cont {
+    display: none;}
+.cont {
+    width: 100%;}
+.tab-switch:checked+.tab-label+.cont {
+     display: block;}
+.tab-switch:checked+.tab-label {
+    color: #fff;
+    background: #060;}
+
+
+ttl,cd,song {display:block;}
+ttl {
+    margin: .5em auto;
+    padding: .5em .3em;
+}
+ttl>p {
+    margin:0;
+    font-weight: bold;
+}
+ttl.active {margin-bottom:.5em;}
+ttl {
+    cursor:pointer;
+    background:#cfc;}
+data {
+    font-weight: normal;
+    font-size:.6em;
+}
+data::before {
+    content: '\A';
+    white-space: pre;
+}
+song {
+    padding: .4em;
+    border-bottom: 1px dotted #00aaa7;
+}
+cd {
+    margin-left:1em;
+/*  padding: 0 1.5em;*/
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: .3s;
+}
+cd.open {
+/*  padding: .625em 1.5em;*/
+  line-height: normal; /* numberに書き換える*/
+  height: auto;
+  opacity: 1;
+}
+.bdr1px {border: solid 1px #000000;}
+
+.btn {
+  background-color: #aabbff;/*←←←背景色を変えたい場合、数値修正*/
+  border: none;
+/*  color: darkslategray;*/
+  text-align: center;
+  text-decoration: none;
+  text-decoration-color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+/*  margin: 4px 2px;*/
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -ms-filter: "alpha(opacity=80)";
+}
+
+footer, footer a {color: #090;}
+.hkbdpj {font-size:4px;}
+.hkbdpj span,.hkbdpj span>a {color:#9f9;}
+
+.dpno {display: none;}
+
+
+@media screen and (min-width:768px) {/*　画面サイズ 768px 以上の適用　*/
+#content {width: 80%; margin: 0 auto;}
+    footer,copy {font-size: .7em; text-align: right;}
+    .sp {display: none;}
+}
+
+
+@media screen and (max-width:767px) {/*　画面サイズ 767px 以下の適用　*/
+    .tab-label {
+        display: block;
+        width: 100%;
+    }
+    #TAB-01+label {
+        margin: 0;}
+    label {
+        margin: 0 0 5px !important;
+        border-radius: 0;}
+    .tab-switch+.tab-label {font-size: .7em;}
+    .tab-switch:checked+.tab-label {
+        font-size: 1em;
+        order: -2;}
+}
+
+
+@media screen and (max-width:320px) {/*　画面サイズ 320px 以下の適用　*/
+body {font-size: 16px;}
+/*    footer,copy {font-size: .5em; text-align: right;}*/
+}
+
