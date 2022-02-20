@@ -141,7 +141,11 @@ footer, footer a {color: #090;}
         font-size: 1em;
         order: -2;}
 }
+    ttl>p {line-height: 1;}
 
+@media screen and (max-width:376px) {/*　画面サイズ 320px 以下の適用　*/
+    h1{font-size: 1.2em;}
+}
 
 @media screen and (max-width:320px) {/*　画面サイズ 320px 以下の適用　*/
 body {font-size: 16px;}
